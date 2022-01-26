@@ -18,6 +18,9 @@ It takes the following arguments:
 
 `max.n`: The value to scale the count frequency for each clonotype to. Defaults to the max in the data, but can be set to another value so as to keep two separate plots on the same scale.
 
+## out put
+
+The function outputs a list of two plots. The first is the circos plot and the second is its legends.
 
 ## example
 

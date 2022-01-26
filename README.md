@@ -16,6 +16,8 @@ It takes the following arguments:
 
 `gap`: size of the gap between the rings. Sensible values are from 0 to 0.2.
 
+`max.n`: The value to scale the count frequency for each clonotype to. Defaults to the max in the data, but can be set to another value so as to keep two separate plots on the same scale.
+
 
 ## example
 
@@ -30,6 +32,7 @@ example_plot1 = TCR_circos(df[1:500,],  clonotype ="cdr3s_nt", annotations = ann
 plot_grid(example_plot1$plot, example_plot1$legend, nrow=1)
 ```
 
+
 ![example_plot1](https://user-images.githubusercontent.com/7208125/151250865-90f1d2be-dddb-46ab-a7b1-1264aa4e49ed.jpg)
 
 ```
@@ -40,5 +43,11 @@ plot_grid(example_plot2$plot, example_plot2$legend, nrow=1) -> example_plot2_wit
 
 ![example_plot2](https://user-images.githubusercontent.com/7208125/151252926-9097b8b1-c47e-4804-9ef9-c17c5f9addbc.jpg)
 
+## ordering
 
+Currently the plot only orders by clonotype frequency, but later versions will hopfully allow for custom ordering and a dendrogram plot in the middle.
 
+## data
+
+The [example data file](https://github.com/aislyn/TCR_circos/blob/main/example_TCR_data.csv) provided here was
+[downloaded from 10X genomics](https://www.10xgenomics.com/resources/datasets/nsclc-tumor-1-standard-5-0-0) and processed as if it was the cell metadata for single cell TCR/transcriptome analysis. 

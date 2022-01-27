@@ -41,7 +41,6 @@ plot_grid(example_plot1$plot, example_plot1$legend, nrow=1)
 ```
 example_plot2 = TCR_circos(df[1:500,],  clonotype ="cdr3s_nt", annotations = c("mait_evidence","n_TRB"), scale = 0.5, gap = 0.2, colors = colors)
 plot_grid(example_plot2$plot, example_plot2$legend, nrow=1) -> example_plot2_with_legend
-
 ```
 
 ![example_plot2](https://user-images.githubusercontent.com/7208125/151252926-9097b8b1-c47e-4804-9ef9-c17c5f9addbc.jpg)
